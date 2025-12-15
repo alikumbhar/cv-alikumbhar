@@ -4,12 +4,140 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ali Ahmed | DevOps Engineer & SRE</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --border: #1f2937;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0 0 10px;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 520px;
+    }
+
+    .hero .meta {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 16px;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      margin: 4px 6px 0 0;
+      background: #020617;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* EXPERIENCE */
+    .role {
+      margin-bottom: 20px;
+    }
+
+    .role h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .role span {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 12px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+    }
+
+    li { margin-bottom: 8px; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 80px;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 38px; }
+    }
+  </style>
 </head>
 <body>
 
 <div class="container">
+
+  <!-- HERO -->
   <section class="hero">
     <div>
       <h1>Ali <span>Ahmed</span></h1>
@@ -35,21 +163,69 @@
     </div>
   </section>
 
+  <!-- SKILLS -->
+  <section class="card">
+    <h2>Skills & Technologies</h2>
+    <div class="skills">
+      <div>
+        <h3>Cloud & Platforms</h3>
+        <span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">IaaS</span><span class="tag">PaaS</span><span class="tag">SaaS</span>
+      </div>
+      <div>
+        <h3>DevOps & CI/CD</h3>
+        <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">GitLab</span><span class="tag">CircleCI</span><span class="tag">Prefect</span>
+      </div>
+      <div>
+        <h3>Containers & IaC</h3>
+        <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Terraform</span><span class="tag">Ansible</span>
+      </div>
+      <div>
+        <h3>Databases & Scripting</h3>
+        <span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">DynamoDB</span><span class="tag">Python</span><span class="tag">Shell</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
   <section class="card">
     <h2>Experience</h2>
-    <h3>Senior Staff Engineer – SignDevOps</h3>
-    <span>Karachi, Pakistan · 2022 – Present</span>
+    <div class="role">
+      <h3>Senior Staff Engineer – SignDevOps</h3>
+      <span>Karachi, Pakistan · 2022 – Present</span>
+      <ul>
+        <li>Implemented secure cloud architectures using AWS KMS, Secrets Manager, and API authentication.</li>
+        <li>Designed and automated CI/CD pipelines, improving release speed by 45%.</li>
+        <li>Built multi-region AWS infrastructure using Terraform, reducing provisioning time by 75%.</li>
+        <li>Developed monitoring dashboards with Prometheus, Alertmanager, Grafana, and OpenSearch.</li>
+        <li>Reduced data processing time from 24h to 4h, achieving 80% cost savings.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="card">
+    <h2>Selected Projects</h2>
     <ul>
-      <li>Designed secure AWS architectures with Terraform & Kubernetes.</li>
-      <li>Automated CI/CD pipelines improving delivery speed by 45%.</li>
-      <li>Reduced infrastructure cost by 80% using serverless architecture.</li>
+      <li><strong>Infrastructure as Code Platform:</strong> Automated multi-region AWS environments using Terraform.</li>
+      <li><strong>CI/CD at Scale:</strong> Jenkins + GitHub Actions pipelines with Docker & Kubernetes.</li>
+      <li><strong>DevSecOps Pipeline:</strong> Container vulnerability scanning using Trivy.</li>
+      <li><strong>Monitoring as Code:</strong> Fully reproducible observability stack with Prometheus & Grafana.</li>
     </ul>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="card">
+    <h2>Education</h2>
+    <p>
+      Bachelor of Computer Science<br>
+      University of Sindh · 2009 – 2013
+    </p>
   </section>
 
   <footer>
     © 2025 Ali Ahmed · DevOps Engineer & SRE
   </footer>
-</div>
 
+</div>
 </body>
 </html>
